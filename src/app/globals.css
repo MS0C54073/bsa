@@ -135,7 +135,6 @@ html:not(.dark-neural-networks) {
 html.dark-neural-networks {
   background-color: #0b0f19;
   position: relative;
-  overflow: hidden;
 }
 
 @keyframes move-up {
