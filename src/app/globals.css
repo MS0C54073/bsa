@@ -129,10 +129,6 @@ html {
   background-attachment: fixed;
 }
 
-.dark-neural-networks {
-  overflow: hidden;
-}
-
 .dark-neural-networks::before,
 .dark-neural-networks::after {
   content: "";
