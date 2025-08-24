@@ -122,69 +122,55 @@ body {
 }
 
 html {
-  background-image: url('https://drive.google.com/uc?export=view&id=15J4_eqDBhUV2mfZm-Myl3gGY-IGfuDIr');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-.dark-neural-networks::before,
-.dark-neural-networks::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  border-radius: 50%;
-  z-index: -1;
-  will-change: transform;
-}
-
-.dark-neural-networks::before {
-  background: radial-gradient(circle at center, rgba(0, 150, 255, 0.2) 0%, transparent 40%),
-              radial-gradient(circle at center, rgba(0, 255, 200, 0.15) 0%, transparent 35%);
-  animation: rotate 20s linear infinite;
-}
-
-.dark-neural-networks::after {
-  background: radial-gradient(circle at 20% 80%, rgba(200, 100, 255, 0.1) 0%, transparent 30%),
-              radial-gradient(circle at 80% 20%, rgba(100, 200, 255, 0.15) 0%, transparent 30%);
-  animation: rotate 30s linear infinite reverse;
-}
-
-@keyframes rotate {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-@keyframes stars {
-  from { transform: translateY(0px); }
-  to { transform: translateY(-2000px); }
+html:not(.dark-neural-networks) {
+    background-image: url('https://drive.google.com/uc?export=view&id=15J4_eqDBhUV2mfZm-Myl3gGY-IGfuDIr');
 }
 
 html.dark-neural-networks {
+  background-color: #0b0f19;
   position: relative;
+  overflow: hidden;
 }
 
-html.dark-neural-networks:before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
+@keyframes move-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100px); }
+}
+
+html.dark-neural-networks::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200vmax;
+    height: 200vmax;
     background-image:
-        radial-gradient(1px 1px at 20px 30px, #eee, transparent),
-        radial-gradient(1px 1px at 40px 70px, #fff, transparent),
-        radial-gradient(1px 1px at 50px 160px, #ddd, transparent),
-        radial-gradient(1px 1px at 90px 40px, #fff, transparent),
-        radial-gradient(2px 2px at 130px 80px, #fff, transparent),
-        radial-gradient(2px 2px at 160px 120px, #ddd, transparent);
-    background-repeat: repeat;
-    background-size: 200px 200px;
-    animation: stars 20s linear infinite;
-    opacity: 0.3;
+        radial-gradient(circle, transparent 70%, hsl(var(--accent) / 0.1) 70.5%),
+        repeating-conic-gradient(from 0deg, transparent 0 17.5deg, hsl(var(--accent) / 0.1) 17.6deg 18deg);
+    background-size: 100px 100px, 100px 100px;
+    transform: translate(-50%, -50%);
+    animation: move-up 10s linear infinite;
+    z-index: -2;
+}
+
+
+html.dark-neural-networks::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(to right, 
+        hsl(var(--accent) / 0.1) 1px, 
+        transparent 1px
+    ), linear-gradient(to bottom, 
+        hsl(var(--accent) / 0.1) 1px, 
+        transparent 1px
+    );
+    background-size: 50px 50px;
+    z-index: -1;
 }
