@@ -26,7 +26,7 @@ export function Hero() {
             </div>
           </div>
           <Image
-            src="https://drive.google.com/uc?export=view&id=1SVzYjus6N-VfSvkOXsmbr4Fr3zr53VC_"
+            src="https://drive.google.com/uc?export=view&id=15J4_eqDBhUV2mfZm-Myl3gGY-IGfuDIr"
             alt="Hero"
             width={600}
             height={400}

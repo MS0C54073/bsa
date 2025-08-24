@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "./theme-toggle";
 
 export function Header() {
   return (
@@ -13,9 +14,12 @@ export function Header() {
           <a href="#testimonials" className="transition-colors hover:text-primary">Testimonials</a>
           <a href="#contact" className="transition-colors hover:text-primary">Contact</a>
         </nav>
-        <Button asChild>
-          <a href="https://wa.me/260979374189" target="_blank">WhatsApp Us</a>
-        </Button>
+        <div className="flex items-center gap-4">
+          <Button asChild>
+            <a href="https://wa.me/260979374189" target="_blank">WhatsApp Us</a>
+          </Button>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );
