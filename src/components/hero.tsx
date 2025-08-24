@@ -26,7 +26,7 @@ export function Hero() {
             </div>
           </div>
           <Image
-            src="https://placehold.co/600x400.png"
+            src="https://drive.google.com/uc?export=view&id=1SVzYjus6N-VfSvkOXsmbr4Fr3zr53VC_"
             alt="Hero"
             width={600}
             height={400}
