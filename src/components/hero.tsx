@@ -16,7 +16,7 @@ export function Hero() {
               </p>
                <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl text-accent">
                 Smart Devices. Smarter Solutions.
-              </h2>
+               </h2>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Button asChild size="lg">
