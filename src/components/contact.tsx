@@ -64,20 +64,6 @@ export function Contact() {
                     <MapPin className="w-5 h-5 text-primary" />
                     <span>Lusaka, Zambia</span>
                 </div>
-                <div className="flex items-center gap-4 pt-4">
-                    <a href="https://wa.me/260979374189" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">
-                        <WhatsAppIcon className="w-6 h-6" />
-                    </a>
-                    <a href="https://t.me/bsaconnect" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">
-                        <TelegramIcon className="w-6 h-6" />
-                    </a>
-                     <a href="https://www.linkedin.com/company/bsa-connect" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">
-                        <Linkedin className="w-6 h-6" />
-                    </a>
-                     <a href="https://www.facebook.com/bsaconnect" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">
-                        <Facebook className="w-6 h-6" />
-                    </a>
-                </div>
             </div>
           </div>
           <div>
