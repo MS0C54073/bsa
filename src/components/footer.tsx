@@ -17,6 +17,9 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} BSA Connect. All rights reserved.
           </p>
+           <p className="text-sm text-muted-foreground">
+            Developed by <a href="https://tinyurl.com/muzosalimcv" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">MuzoInTech (MIT)</a>
+          </p>
         </div>
         <div className="flex gap-4">
             <a href="https://wa.me/260979374189" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-muted-foreground hover:text-primary">
