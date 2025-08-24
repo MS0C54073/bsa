@@ -1,14 +1,25 @@
+import { Header } from "@/components/header";
+import { Hero } from "@/components/hero";
+import { Services } from "@/components/services";
+import { WhyChooseUs } from "@/components/why-choose-us";
+import { Testimonials } from "@/components/testimonials";
+import { Contact } from "@/components/contact";
+import { Footer } from "@/components/footer";
+import { HashtagGenerator } from "@/components/hashtag-generator";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-          Welcome to your new app
-        </h1>
-        <p className="mt-6 text-lg leading-8 text-muted-foreground">
-          This is the starting point for your application. You can edit this page to get started.
-        </p>
-      </div>
-    </main>
+    <div className="flex flex-col min-h-screen bg-background">
+      <Header />
+      <main className="flex-1">
+        <Hero />
+        <Services />
+        <WhyChooseUs />
+        <Testimonials />
+        <HashtagGenerator />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }
