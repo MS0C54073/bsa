@@ -48,6 +48,14 @@ export function Contact() {
                     <span>+260 97 9374189</span>
                 </div>
                 <div className="flex items-center gap-4">
+                    <Phone className="w-5 h-5 text-primary" />
+                    <span>0973938320</span>
+                </div>
+                <div className="flex items-center gap-4">
+                    <Phone className="w-5 h-5 text-primary" />
+                    <span>0765868085</span>
+                </div>
+                <div className="flex items-center gap-4">
                     <Mail className="w-5 h-5 text-primary" />
                     <span>info@bsaconnect.co</span>
                 </div>
