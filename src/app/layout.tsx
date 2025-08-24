@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-body antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark-neural-networks"
           enableSystem
           disableTransitionOnChange
         >
