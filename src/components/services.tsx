@@ -3,7 +3,7 @@ import { Smartphone, Wrench, Briefcase } from "lucide-react";
 
 export function Services() {
   return (
-    <section id="services" className="py-12 sm:py-24 bg-card">
+    <section id="services" className="py-12 sm:py-24 bg-card/80">
       <div className="container px-4 md:px-6">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl text-primary">Our Services</h2>

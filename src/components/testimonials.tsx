@@ -3,7 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-12 sm:py-24 bg-card">
+    <section id="testimonials" className="py-12 sm:py-24 bg-card/80">
       <div className="container px-4 md:px-6">
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl text-primary">What Our Clients Say</h2>
