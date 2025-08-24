@@ -23,7 +23,7 @@ export function Footer() {
           </p>
         </div>
         <div className="flex gap-4">
-            <a href="https://wa.me/260979374189" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-muted-foreground hover:text-primary">
+            <a href="https://wa.me/260765868085" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-muted-foreground hover:text-primary">
                 <WhatsAppIcon className="w-6 h-6"/>
             </a>
             <a href="https://t.me/bsaconnect" target="_blank" rel="noopener noreferrer" aria-label="Telegram" className="text-muted-foreground hover:text-primary">

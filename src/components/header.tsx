@@ -16,7 +16,7 @@ export function Header() {
         </nav>
         <div className="flex items-center gap-4">
           <Button asChild>
-            <a href="https://wa.me/260979374189" target="_blank">WhatsApp Us</a>
+            <a href="https://wa.me/260765868085" target="_blank">WhatsApp Us</a>
           </Button>
           <ThemeToggle />
         </div>

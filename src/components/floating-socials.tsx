@@ -16,7 +16,7 @@ export function FloatingSocials() {
   return (
     <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-3">
         <a 
-            href="https://wa.me/260979374189" 
+            href="https://wa.me/260765868085" 
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="WhatsApp" 

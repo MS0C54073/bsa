@@ -21,7 +21,7 @@ export function Hero() {
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Button asChild size="lg">
-                <a href="https://wa.me/260979374189" target="_blank">WhatsApp Us</a>
+                <a href="https://wa.me/260765868085" target="_blank">WhatsApp Us</a>
               </Button>
             </div>
           </div>
