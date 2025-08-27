@@ -11,12 +11,13 @@ const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-card/80 border-t">
       <div className="container flex flex-col items-center justify-between gap-4 py-6 md:h-24 md:flex-row md:py-0">
-        <div className="flex flex-col items-center gap-2 px-8 md:gap-2 md:px-0 text-center md:text-left">
+        <div className="flex flex-col items-center gap-2 px-8 md:gap-2 md:px-0 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} BSA Solutions. All rights reserved.
+            © {currentYear} BSA Solutions. All rights reserved.
           </p>
            <p className="text-sm text-muted-foreground">
             Developed by <a href="https://tinyurl.com/muzosalimcv" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">MuzoInTech (MIT)</a>
