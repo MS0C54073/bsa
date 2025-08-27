@@ -10,7 +10,7 @@ export function WhyChooseUs() {
             We are committed to providing the best service and value to our clients.
           </p>
         </div>
-        <div className="mt-12 grid items-center gap-6 md:grid-cols-3 md:gap-12">
+        <div className="mt-12 grid gap-8 sm:grid-cols-1 md:grid-cols-3">
             <div className="flex flex-col items-center text-center">
                 <CheckCircle className="w-12 h-12 text-primary mb-4"/>
                 <h3 className="text-xl font-bold font-headline">Trusted</h3>

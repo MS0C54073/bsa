@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="py-24 sm:py-32">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-24">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-4">
               <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
@@ -25,14 +25,15 @@ export function Hero() {
               </Button>
             </div>
           </div>
-          <Image
-            src="https://drive.google.com/uc?export=view&id=15J4_eqDBhUV2mfZm-Myl3gGY-IGfuDIr"
-            alt="Hero"
-            width={600}
-            height={400}
-            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last"
-            data-ai-hint="business technology"
-          />
+          <div className="relative w-full min-h-[250px] sm:min-h-[400px]">
+            <Image
+              src="https://drive.google.com/uc?export=view&id=15J4_eqDBhUV2mfZm-Myl3gGY-IGfuDIr"
+              alt="Hero"
+              fill
+              className="object-cover rounded-xl"
+              data-ai-hint="business technology"
+            />
+          </div>
         </div>
       </div>
     </section>

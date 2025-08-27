@@ -11,8 +11,8 @@ export function Testimonials() {
             Read testimonials from our satisfied customers.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-1 lg:grid-cols-1 mt-12 justify-center">
-          <Card className="max-w-md">
+        <div className="grid gap-8 md:grid-cols-1 mt-12 justify-items-center">
+          <Card className="max-w-md w-full">
             <CardContent className="pt-6">
               <div className="space-y-4">
                 <p className="text-sm italic">"The team at BSA Connect is professional, knowledgeable, and always ready to help. Highly recommended!"</p>

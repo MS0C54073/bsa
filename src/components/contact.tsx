@@ -60,11 +60,11 @@ export function Contact() {
                     <span>Kamwala, Lusaka, Zambia</span>
                 </div>
             </div>
-            <div className="rounded-lg overflow-hidden border">
+            <div className="rounded-lg overflow-hidden border aspect-video">
                 <iframe
                     src="https://maps.google.com/maps?q=Kamwala%2C%20Lusaka&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     width="100%"
-                    height="350"
+                    height="100%"
                     style={{ border: 0 }}
                     allowFullScreen={false}
                     loading="lazy"
