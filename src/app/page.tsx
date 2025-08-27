@@ -6,7 +6,6 @@ import { ServiceCalculator } from "@/components/service-calculator";
 import { Testimonials } from "@/components/testimonials";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
-import { HashtagGenerator } from "@/components/hashtag-generator";
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
         <WhyChooseUs />
         <ServiceCalculator />
         <Testimonials />
-        <HashtagGenerator />
         <Contact />
       </main>
       <Footer />
