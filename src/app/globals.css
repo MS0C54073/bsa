@@ -76,40 +76,6 @@ body {
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-  .dark-neural-networks {
-    --background: 220 40% 5%;
-    --foreground: 210 40% 98%;
-    --card: 220 40% 10%;
-    --card-foreground: 210 40% 98%;
-    --popover: 220 40% 5%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 220 40% 10%;
-    --secondary: 210 40% 15%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 210 40% 15%;
-    --muted-foreground: 210 40% 60%;
-    --accent: 200 100% 50%;
-    --accent-foreground: 220 40% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 210 40% 20%;
-    --input: 210 40% 20%;
-    --ring: 200 100% 50%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 220 40% 10%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 200 100% 50%;
-    --sidebar-primary-foreground: 220 40% 10%;
-    --sidebar-accent: 210 40% 15%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 210 40% 20%;
-    --sidebar-ring: 200 100% 50%;
-  }
 }
 
 @layer base {
@@ -126,50 +92,5 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-html:not(.dark-neural-networks) {
-    background-image: url('https://drive.google.com/uc?export=view&id=15J4_eqDBhUV2mfZm-Myl3gGY-IGfuDIr');
-}
-
-html.dark-neural-networks {
-  background-color: #0b0f19;
-  position: relative;
-}
-
-@keyframes move-up {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-100px); }
-}
-
-html.dark-neural-networks::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 200vmax;
-    height: 200vmax;
-    background-image:
-        radial-gradient(circle, transparent 70%, hsl(var(--accent) / 0.1) 70.5%),
-        repeating-conic-gradient(from 0deg, transparent 0 17.5deg, hsl(var(--accent) / 0.1) 17.6deg 18deg);
-    background-size: 100px 100px, 100px 100px;
-    transform: translate(-50%, -50%);
-    animation: move-up 10s linear infinite;
-    z-index: -2;
-}
-
-
-html.dark-neural-networks::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: linear-gradient(to right, 
-        hsl(var(--accent) / 0.1) 1px, 
-        transparent 1px
-    ), linear-gradient(to bottom, 
-        hsl(var(--accent) / 0.1) 1px, 
-        transparent 1px
-    );
-    background-size: 50px 50px;
-    z-index: -1;
+  background-image: url('https://drive.google.com/uc?export=view&id=15J4_eqDBhUV2mfZm-Myl3gGY-IGfuDIr');
 }
