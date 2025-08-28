@@ -27,7 +27,7 @@ export function Hero() {
           </div>
           <div className="relative w-full min-h-[250px] sm:min-h-[400px] aspect-video">
             <Image
-              src="https://picsum.photos/600/400"
+              src="https://placehold.co/600x400/000000/FFFFFF/png?text=BSA+Solutions"
               alt="Hero"
               fill
               className="object-cover rounded-xl"
