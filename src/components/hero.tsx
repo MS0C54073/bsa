@@ -27,7 +27,7 @@ export function Hero() {
           </div>
           <div className="relative w-full min-h-[250px] sm:min-h-[400px] aspect-video">
             <Image
-              src="https://drive.google.com/uc?export=view&id=1SVzYjus6N-VfSvkOXsmbr4Fr3zr53VC_"
+              src="https://drive.google.com/uc?export=view&id=15J4_eqDBhUV2mfZm-Myl3gGY-IGfuDIr"
               alt="Hero"
               fill
               className="object-cover rounded-xl"
