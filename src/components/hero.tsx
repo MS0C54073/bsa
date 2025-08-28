@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
@@ -9,7 +8,7 @@ export function Hero() {
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:gap-24">
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-4">
-              <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-blue-600 dark:text-blue-500">
+              <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
                 BSA Solutions
               </h1>
               <p className="max-w-[600px] text-muted-foreground md:text-xl">

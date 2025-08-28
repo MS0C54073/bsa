@@ -1,13 +1,21 @@
 "use client";
 
 import React, { useRef, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 
 export function AnimatedBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+
+    if (theme !== 'dark') {
+      const ctx = canvas.getContext('2d');
+      ctx?.clearRect(0, 0, canvas.width, canvas.height);
+      return;
+    }
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
@@ -46,7 +54,10 @@ export function AnimatedBackground() {
         if (!ctx) return;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(128, 255, 128, 0.8)';
+        
+        // Use a color from the theme
+        const particleColor = getComputedStyle(document.documentElement).getPropertyValue('--primary');
+        ctx.fillStyle = `hsl(${particleColor.trim()})`;
         ctx.fill();
       }
     }
@@ -68,17 +79,29 @@ export function AnimatedBackground() {
 
           if (distance < connectionDistance) {
             const opacity = 1 - distance / connectionDistance;
+            const lineColor = getComputedStyle(document.documentElement).getPropertyValue('--primary');
+            
+            // Getting HSL components is tricky from a string, so we will just use it as is with opacity
+            let hslColor = `hsl(${lineColor.trim()})`;
+            // A simple regex to parse HSL values (doesn't handle all cases)
+            const match = /hsl\(([\d.]+)\s*,?\s*([\d.]+)%\s*,?\s*([\d.]+)%\)/.exec(hslColor);
+            if (match) {
+                 ctx.strokeStyle = `hsla(${match[1]}, ${match[2]}%, ${match[3]}%, ${opacity})`;
+            } else {
+                 ctx.strokeStyle = `hsla(217, 91%, 59%, ${opacity})`; // Fallback
+            }
+
+            ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(128, 255, 128, ${opacity})`;
-            ctx.lineWidth = 0.5;
             ctx.stroke();
           }
         }
       }
     }
-
+    
+    let animationFrameId: number;
     function animate() {
       if (!ctx) return;
       ctx.clearRect(0, 0, width, height);
@@ -87,7 +110,7 @@ export function AnimatedBackground() {
         p.draw();
       });
       connect();
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
     }
 
     function handleResize() {
@@ -102,8 +125,9 @@ export function AnimatedBackground() {
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [theme]);
 
   return <canvas id="neural-canvas" ref={canvasRef} />;
 }

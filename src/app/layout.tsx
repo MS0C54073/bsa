@@ -4,6 +4,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { FloatingSocials } from '@/components/floating-socials';
 import { ThemeProvider } from '@/components/theme-provider';
+import { AnimatedBackground } from '@/components/animated-background';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' });
@@ -27,6 +28,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
+          <AnimatedBackground />
           {children}
           <Toaster />
           <FloatingSocials />

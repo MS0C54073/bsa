@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header className="bg-background/80 backdrop-blur-sm sticky top-0 z-40 w-full border-b">
       <div className="container flex h-16 items-center justify-between">
-        <a href="#" className="text-2xl font-bold font-headline text-blue-600 dark:text-blue-500">
+        <a href="#" className="text-2xl font-bold font-headline text-primary">
           BSA
         </a>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
