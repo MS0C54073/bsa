@@ -6,7 +6,6 @@ import { Hero } from "@/components/hero";
 import { Services } from "@/components/services";
 import { WhyChooseUs } from "@/components/why-choose-us";
 import { ServiceCalculator } from "@/components/service-calculator";
-import { Testimonials } from "@/components/testimonials";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 
@@ -45,7 +44,6 @@ export default function Home() {
         <div className="fade-in-section"><Services /></div>
         <div className="fade-in-section"><WhyChooseUs /></div>
         <div className="fade-in-section"><ServiceCalculator /></div>
-        <div className="fade-in-section"><Testimonials /></div>
         <div className="fade-in-section"><Contact /></div>
       </main>
       <Footer />
