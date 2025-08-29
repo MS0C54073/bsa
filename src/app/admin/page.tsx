@@ -1,26 +1,6 @@
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
 import { Activity, Users, Eye } from "lucide-react";
-
-const pageViewsData = [
-  { name: 'Mon', views: 2400 },
-  { name: 'Tue', views: 1398 },
-  { name: 'Wed', views: 9800 },
-  { name: 'Thu', views: 3908 },
-  { name: 'Fri', views: 4800 },
-  { name: 'Sat', views: 3800 },
-  { name: 'Sun', views: 4300 },
-];
-
-const userSignupsData = [
-    { name: 'Jan', users: 12 },
-    { name: 'Feb', users: 19 },
-    { name: 'Mar', users: 32 },
-    { name: 'Apr', users: 28 },
-    { name: 'May', users: 45 },
-    { name: 'Jun', users: 55 },
-];
 
 export default function AdminDashboard() {
   return (
@@ -68,16 +48,8 @@ export default function AdminDashboard() {
             <CardTitle className="font-headline">Page Views Over Time</CardTitle>
           </CardHeader>
           <CardContent className="pl-2">
-             <div className="h-[300px]">
-                <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={pageViewsData}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Tooltip />
-                        <Line type="monotone" dataKey="views" stroke="hsl(var(--primary))" />
-                    </LineChart>
-                </ResponsiveContainer>
+             <div className="h-[300px] flex items-center justify-center text-muted-foreground">
+                Chart temporarily unavailable
              </div>
           </CardContent>
         </Card>
@@ -86,16 +58,8 @@ export default function AdminDashboard() {
             <CardTitle className="font-headline">New User Sign-ups</CardTitle>
           </CardHeader>
           <CardContent className="pl-2">
-            <div className="h-[300px]">
-                <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={userSignupsData}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Tooltip />
-                        <Line type="monotone" dataKey="users" stroke="hsl(var(--accent))" />
-                    </LineChart>
-                </ResponsiveContainer>
+            <div className="h-[300px] flex items-center justify-center text-muted-foreground">
+                Chart temporarily unavailable
             </div>
           </CardContent>
         </Card>
