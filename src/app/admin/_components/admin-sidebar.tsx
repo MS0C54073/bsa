@@ -1,9 +1,10 @@
 
+
 "use client"
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, Users, Settings } from "lucide-react";
+import { LayoutDashboard, Users, Settings, Mail } from "lucide-react";
 import { SidebarHeader, SidebarContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
 
@@ -32,6 +33,14 @@ export function AdminSidebar() {
                             <Link href="/admin">
                                 <LayoutDashboard />
                                 <span>Dashboard</span>
+                            </Link>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton asChild isActive={isActive('/admin/messages')}>
+                            <Link href="/admin/messages">
+                                <Mail />
+                                <span>Messages</span>
                             </Link>
                         </SidebarMenuButton>
                     </SidebarMenuItem>

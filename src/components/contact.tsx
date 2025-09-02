@@ -1,4 +1,5 @@
 
+
 "use client"
 
 import { useState } from "react";
@@ -8,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { saveMessage } from "@/lib/message-service";
 
 export function Contact() {
   const { toast } = useToast();
@@ -15,9 +17,11 @@ export function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form Submitted:", { name, email, message });
+    
+    await saveMessage({ name, email, message });
+
     toast({
       title: "Message Sent!",
       description: "Thanks for reaching out. We'll get back to you soon.",
