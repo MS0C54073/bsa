@@ -13,7 +13,14 @@ interface Message {
   read: boolean;
 }
 
-let messages: Message[] = [
+// In a development environment, the server code can be re-executed frequently.
+// To prevent our in-memory data from being lost on these "hot reloads",
+// we can store it on the `global` object, which persists across them.
+declare global {
+  var messages: Message[] | undefined;
+}
+
+const initialMessages: Message[] = [
     {
         id: '1',
         name: 'John Doe',
@@ -31,6 +38,12 @@ let messages: Message[] = [
         read: true,
     }
 ];
+
+if (!global.messages) {
+  global.messages = initialMessages;
+}
+
+let messages = global.messages;
 
 export async function getMessages(): Promise<Message[]> {
   // In a real app, you'd fetch from a database.
