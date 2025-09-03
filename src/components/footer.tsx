@@ -14,7 +14,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-card/80 border-t">
-      <div className="container flex flex-col items-center justify-between gap-4 py-6 md:h-24 md:flex-row md:py-0">
+      <div className="container flex flex-col items-center justify-center gap-4 py-6 md:h-24 md:flex-row md:py-0">
         <div className="flex flex-col items-center gap-2 px-8 md:gap-2 md:px-0 text-center">
           <p className="text-sm text-muted-foreground">
             © {currentYear} BSA Solutions. All rights reserved.
@@ -23,7 +23,7 @@ export function Footer() {
             Developed by <a href="https://tinyurl.com/muzosalimcv" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">MuzoInTech (MIT)</a>
           </p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 md:absolute md:right-8">
             <a href="https://wa.me/260765868085" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-muted-foreground hover:text-primary">
                 <WhatsAppIcon className="w-6 h-6"/>
             </a>
