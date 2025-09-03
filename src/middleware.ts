@@ -1,7 +1,6 @@
-
 import { NextRequest, NextResponse } from 'next/server';
 
-const DUMMY_LOGGED_IN = true; // Change to true to simulate being logged in
+const DUMMY_LOGGED_IN = false; // Change to true to simulate being logged in
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;

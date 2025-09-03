@@ -1,4 +1,3 @@
-
 // Import the functions you need from the SDKs you need
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getFirestore }from "firebase/firestore";
@@ -7,12 +6,12 @@ import { getFirestore }from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "TODO: Add your API key",
-  authDomain: "TODO: Add your auth domain",
-  projectId: "TODO: Add your project ID",
-  storageBucket: "TODO: Add your storage bucket",
-  messagingSenderId: "TODO: Add your messaging sender ID",
-  appId: "TODO: Add your app ID"
+  "projectId": "bsa-connect",
+  "appId": "1:514537342227:web:b1b29e1f965d01c18b86e6",
+  "storageBucket": "bsa-connect.firebasestorage.app",
+  "apiKey": "AIzaSyBTgq7zkelkxjIliRKZ9ShMeDKTpBuRV-8",
+  "authDomain": "bsa-connect.firebaseapp.com",
+  "messagingSenderId": "514537342227"
 };
 
 // Initialize Firebase
