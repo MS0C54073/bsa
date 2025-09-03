@@ -1,65 +1,44 @@
 
 "use server"
 
-// This is a temporary, in-memory message store.
-// In a real application, you would use a database like Firestore.
+import { db } from './firebase';
+import { collection, addDoc, getDocs, orderBy, query, serverTimestamp } from 'firebase/firestore';
 
-interface Message {
+export interface Message {
   id: string;
   name: string;
   email: string;
   message: string;
-  timestamp: number;
+  timestamp: any; // Firestore timestamp object
   read: boolean;
 }
 
-// In a development environment, the server code can be re-executed frequently.
-// To prevent our in-memory data from being lost on these "hot reloads",
-// we can store it on the `global` object, which persists across them.
-declare global {
-  var messages: Message[] | undefined;
-}
-
-const initialMessages: Message[] = [
-    {
-        id: '1',
-        name: 'John Doe',
-        email: 'john.doe@example.com',
-        message: 'Hello, I was wondering if you do custom PC builds? I am looking for a high-end gaming rig.',
-        timestamp: Date.now() - 1000 * 60 * 60 * 2, // 2 hours ago
-        read: false,
-    },
-    {
-        id: '2',
-        name: 'Jane Smith',
-        email: 'jane.smith@example.com',
-        message: 'My iPhone 12 screen is cracked. Can you give me a quote for a screen replacement?',
-        timestamp: Date.now() - 1000 * 60 * 60 * 24, // 1 day ago
-        read: true,
-    }
-];
-
-if (!global.messages) {
-  global.messages = initialMessages;
-}
-
-let messages = global.messages;
-
 export async function getMessages(): Promise<Message[]> {
-  // In a real app, you'd fetch from a database.
-  // We'll sort so newest messages appear first.
-  return [...messages].sort((a, b) => b.timestamp - a.timestamp);
+  const messagesCol = collection(db, 'messages');
+  const q = query(messagesCol, orderBy('timestamp', 'desc'));
+  const messageSnapshot = await getDocs(q);
+  const messageList = messageSnapshot.docs.map(doc => {
+    const data = doc.data();
+    return {
+        id: doc.id,
+        name: data.name,
+        email: data.email,
+        message: data.message,
+        // Firestore timestamps need to be converted safely
+        timestamp: data.timestamp?.toDate()?.getTime() || Date.now(),
+        read: data.read,
+    }
+  });
+  return messageList;
 }
 
-export async function saveMessage(data: { name: string; email: string; message: string }): Promise<Message> {
-  const newMessage: Message = {
-    id: (messages.length + 1).toString(),
+export async function saveMessage(data: { name: string; email: string; message: string }): Promise<{id: string}> {
+  const messagesCol = collection(db, 'messages');
+  const docRef = await addDoc(messagesCol, {
     ...data,
-    timestamp: Date.now(),
+    timestamp: serverTimestamp(),
     read: false,
-  };
-  messages.push(newMessage);
-  // In a real app, you'd save to a database.
-  console.log("New message saved:", newMessage);
-  return newMessage;
+  });
+  console.log("New message saved with ID:", docRef.id);
+  return { id: docRef.id };
 }
