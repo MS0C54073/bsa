@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Smartphone, Wrench, Briefcase } from "lucide-react";
+import { Smartphone, Wrench, Briefcase, Server, Code, AppWindow } from "lucide-react";
 
 export function Services() {
   return (
@@ -37,6 +37,33 @@ export function Services() {
             </CardHeader>
             <CardContent>
               <p>Professional advice to streamline your business operations with the right tech and accounting solutions.</p>
+            </CardContent>
+          </Card>
+           <Card>
+            <CardHeader className="flex flex-row items-center gap-4">
+              <Server className="w-8 h-8 text-primary" />
+              <CardTitle className="font-headline">IT Support</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>Reliable and responsive IT support to keep your systems running smoothly and securely.</p>
+            </CardContent>
+          </Card>
+           <Card>
+            <CardHeader className="flex flex-row items-center gap-4">
+              <Code className="w-8 h-8 text-primary" />
+              <CardTitle className="font-headline">Software Development</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>Custom software solutions tailored to your unique business requirements and goals.</p>
+            </CardContent>
+          </Card>
+           <Card>
+            <CardHeader className="flex flex-row items-center gap-4">
+              <AppWindow className="w-8 h-8 text-primary" />
+              <CardTitle className="font-headline">Web & App Development</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>Beautiful and functional websites and mobile applications to elevate your online presence.</p>
             </CardContent>
           </Card>
         </div>
