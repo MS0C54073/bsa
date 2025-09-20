@@ -21,7 +21,7 @@ export function Team() {
                 <CardTitle className="font-headline">Bwalya Salimu</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="font-semibold text-primary">Founder, CEO & Accountant</p>
+              <p className="font-semibold text-primary">Founder, CEO & Chief Financial Officer</p>
               <p className="text-muted-foreground mt-2">Bwalya leads the company with a vision for excellence and a strong background in business and finance.</p>
             </CardContent>
           </Card>
