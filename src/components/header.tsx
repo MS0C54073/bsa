@@ -12,8 +12,10 @@ export function Header() {
           </Link>
         </Button>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+          <a href="#about-us" className="transition-colors text-primary hover:text-primary/80">About Us</a>
+          <a href="#products" className="transition-colors text-primary hover:text-primary/80">Products</a>
           <a href="#services" className="transition-colors text-primary hover:text-primary/80">Services</a>
-          <a href="#why-us" className="transition-colors text-primary hover:text-primary/80">Why Us</a>
+          <a href="#team" className="transition-colors text-primary hover:text-primary/80">Team</a>
           <a href="#contact" className="transition-colors text-primary hover:text-primary/80">Contact</a>
         </nav>
         <div className="flex items-center gap-4">

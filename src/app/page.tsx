@@ -3,9 +3,10 @@
 import { useEffect } from 'react';
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
+import { AboutUs } from "@/components/about-us";
+import { Products } from "@/components/products";
 import { Services } from "@/components/services";
-import { WhyChooseUs } from "@/components/why-choose-us";
-import { ServiceCalculator } from "@/components/service-calculator";
+import { Team } from "@/components/team";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 
@@ -41,9 +42,10 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <div className="fade-in-section"><AboutUs /></div>
+        <div className="fade-in-section"><Products /></div>
         <div className="fade-in-section"><Services /></div>
-        <div className="fade-in-section"><WhyChooseUs /></div>
-        <div className="fade-in-section"><ServiceCalculator /></div>
+        <div className="fade-in-section"><Team /></div>
         <div className="fade-in-section"><Contact /></div>
       </main>
       <Footer />
